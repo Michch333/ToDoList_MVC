@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ToDoList_MVC.Models.ViewModels.UserDashboardViewModel
+
+<h1>Welcome @Model.EmailAddress !!</h1>
+
+<a asp-controller="ToDoList" asp-action="CreateNew">Create New Item</a>
+<br />
+
+
+@foreach (ToDo item in Model.ToDoItems)
+{
+    <h3> @item.Description </h3>
+    <p>@item.DueDate</p>
+    @if (item.IsCompleted)
+    {
+        <input type="checkbox" checked="checked" />
+
+    }
+    else
+    {
+        <input type="checkbox" />
+    }
+    <a asp-controller="ToDoList" asp-action="DeleteItem">Delete</a>
+}

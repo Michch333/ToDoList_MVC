@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ToDoList_MVC.Models.ToDo
+
+<h1>Create new todo item</h1>
+<form asp-controller="ToDoList" asp-action="TryCreateItem">
+    <label asp-for="Description">Description:</label>
+    <input asp-for="Description" />
+
+    <label>Due Date</label>
+    <input asp-for="DueDate" />
+
+    <button type="submit">Create</button>
+</form>
