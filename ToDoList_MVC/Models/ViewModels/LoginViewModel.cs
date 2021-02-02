@@ -9,5 +9,7 @@ namespace ToDoList_MVC.Models.ViewModels
     {
         public string EmailAddress { get; set; }
         public string Password { get; set; }
+        public string Name { get; set; }
+
     }
 }

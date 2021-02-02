@@ -7,7 +7,7 @@
 @model ToDoList_MVC.Models.ToDo
 
 <h1>Create new todo item</h1>
-<form asp-controller="ToDoList" asp-action="TryCreateItem">
+<form asp-controller="ToDoList" asp-action="TryCreateItem" method="post">
     <label asp-for="Description">Description:</label>
     <input asp-for="Description" />
 

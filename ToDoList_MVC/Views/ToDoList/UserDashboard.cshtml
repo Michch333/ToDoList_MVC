@@ -14,8 +14,10 @@
 
 @foreach (ToDo item in Model.ToDoItems)
 {
-    <h3> @item.Description </h3>
-    <p>@item.DueDate</p>
+    <h2>Description: @item.Description </h2>
+    <h3>ID: @item.ID</h3>
+    <p>Due Date: @item.DueDate</p>
+    <p>Is Completed?</p>
     @if (item.IsCompleted)
     {
         <input type="checkbox" checked="checked" />
@@ -25,5 +27,5 @@
     {
         <input type="checkbox" />
     }
-    <a asp-controller="ToDoList" asp-action="DeleteItem">Delete</a>
+    <a asp-controller="ToDoList" asp-action="TryDeleteItem" asp-route-itemId="@item.ID">Delete</a>
 }

@@ -14,6 +14,8 @@ namespace ToDoList_MVC.Services
 
         }
 
-        public List<ToDoDAL> ToDoItems { get; set; }
+        public DbSet<ToDoDAL> ToDoItems { get; set; }
+        public DbSet<UserDAL> Users { get; set; }
+
     }
 }

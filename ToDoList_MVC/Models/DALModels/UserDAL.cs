@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace ToDoList_MVC.Models.DALModels
 {
-    public class ToDoDAL
+    public class UserDAL
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Identity(1, 1)
-        public int ID { get; set; }
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }
-        public bool IsCompleted { get; set; }
-
+        public int UserID { get; set; }
+        public string Name { get; set; }
+        public string EmailAddress { get; set; }
+        public string Password { get; set; }
     }
 }
