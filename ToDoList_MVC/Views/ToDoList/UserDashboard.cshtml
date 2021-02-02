@@ -14,18 +14,25 @@
 
 @foreach (ToDo item in Model.ToDoItems)
 {
-    <h2>Description: @item.Description </h2>
-    <h3>ID: @item.ID</h3>
-    <p>Due Date: @item.DueDate</p>
-    <p>Is Completed?</p>
+
     @if (item.IsCompleted)
     {
-        <input type="checkbox" checked="checked" />
+        <del>
+            <h2>Description: @item.Description </h2>
+            <h3>ID: @item.ID</h3>
+            <p>Due Date: @item.DueDate</p>
+        </del>
+        <input asp-controller="ToDoList" asp-action="TryCompleteItem" type="checkbox" checked="checked" />
+        <a asp-controller="ToDoList" asp-action="TryCompleteItem" asp-route-itemId="@item.ID">Mark incomplete</a>
 
     }
     else
     {
-        <input type="checkbox" />
+        <h2>Description: @item.Description </h2>
+        <h3>ID: @item.ID</h3>
+        <p>Due Date: @item.DueDate</p>
+        <p>Is Completed?</p>
+        <a asp-controller="ToDoList" asp-action="TryCompleteItem" asp-route-itemId="@item.ID">Complete!</a>
     }
     <a asp-controller="ToDoList" asp-action="TryDeleteItem" asp-route-itemId="@item.ID">Delete</a>
 }

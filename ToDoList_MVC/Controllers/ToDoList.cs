@@ -86,6 +86,16 @@ namespace ToDoList_MVC.Controllers
             return View("UserDashboard", model);
         }
 
+        public IActionResult TryCompleteItem(int itemID, UserDashboardViewModel model)
+        {
+            var thisItem = _toDoListContext.ToDoItems.Find(itemID);
+            thisItem.IsCompleted = !thisItem.IsCompleted;
+            _toDoListContext.SaveChanges();
+
+            model.ToDoItems = ConvertDALToBasic();
+            return View("UserDashboard", model);
+        }
+
         //public IActionResult TryLoginOrCreate(UserDAL user, UserDashboardViewModel model)
         //{
         //    var thisUser = TryLookUpUser(user.EmailAddress, user.Password);
