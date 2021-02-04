@@ -12,6 +12,7 @@ namespace ToDoList_MVC.Models.DALModels
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Identity(1, 1)
         public int UserID { get; set; }
+        public IEnumerable<ToDoDAL> ToDos { get; set; }
         public string Name { get; set; }
         public string EmailAddress { get; set; }
         public string Password { get; set; }

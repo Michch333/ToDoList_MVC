@@ -35,7 +35,15 @@ namespace ToDoList_MVC.Migrations
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("UserDALUserID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
+
+                    b.HasIndex("UserDALUserID");
 
                     b.ToTable("ToDoItems");
                 });
@@ -59,6 +67,18 @@ namespace ToDoList_MVC.Migrations
                     b.HasKey("UserID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ToDoList_MVC.Models.DALModels.ToDoDAL", b =>
+                {
+                    b.HasOne("ToDoList_MVC.Models.DALModels.UserDAL", null)
+                        .WithMany("ToDos")
+                        .HasForeignKey("UserDALUserID");
+                });
+
+            modelBuilder.Entity("ToDoList_MVC.Models.DALModels.UserDAL", b =>
+                {
+                    b.Navigation("ToDos");
                 });
 #pragma warning restore 612, 618
         }

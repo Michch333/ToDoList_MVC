@@ -12,7 +12,10 @@ namespace ToDoList_MVC.Models.DALModels
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Identity(1, 1)
         public int ID { get; set; }
+        [ForeignKey("UserID")]
+        public int UserID { get; set; }
         public string Description { get; set; }
+        [DataType(DataType.Date)]
         public DateTime DueDate { get; set; }
         public bool IsCompleted { get; set; }
 

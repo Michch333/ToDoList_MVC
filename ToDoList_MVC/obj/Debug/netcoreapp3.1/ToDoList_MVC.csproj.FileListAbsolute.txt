@@ -82,8 +82,8 @@ C:\Users\Mike\source\repos\ToDoList_MVC\ToDoList_MVC\obj\Debug\netcoreapp3.1\ToD
 C:\Users\Mike\source\repos\ToDoList_MVC\ToDoList_MVC\obj\Debug\netcoreapp3.1\Razor\Views\ToDoList\CreateNew.cshtml.g.cs
 C:\Users\Mike\source\repos\ToDoList_MVC\ToDoList_MVC\obj\Debug\netcoreapp3.1\Razor\Views\ToDoList\UserDashboard.cshtml.g.cs
 C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\appsettings.Development.json
-C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\ToDoList_MVC.exe
 C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\ToDoList_MVC.deps.json
 C:\Users\Mike\Desktop\Coding\GrandCircus\ToDoList_MVC\ToDoList_MVC\bin\Debug\netcoreapp3.1\ToDoList_MVC.runtimeconfig.json

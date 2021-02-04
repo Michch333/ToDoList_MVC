@@ -14,5 +14,6 @@ namespace ToDoList_MVC.Models.ViewModels
         }
         public string EmailAddress { get; set; }
         public List<ToDo> ToDoItems { get; set; }
+        public User CurrentUser { get; set; }
     }
 }

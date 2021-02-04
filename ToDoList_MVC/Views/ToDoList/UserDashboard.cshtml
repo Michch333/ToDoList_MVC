@@ -8,11 +8,11 @@
 
 <h1>Welcome @Model.EmailAddress !!</h1>
 
-<a asp-controller="ToDoList" asp-action="CreateNew">Create New Item</a>
+<a asp-controller="ToDoList" asp-action="CreateNew" asp-route-currentUser ="@Model.CurrentUser">Create New Item</a>
 <br />
 
 
-@foreach (ToDo item in Model.ToDoItems)
+@foreach (ToDo item in Model.CurrentUser.ToDoList)
 {
 
     @if (item.IsCompleted)
@@ -22,7 +22,6 @@
             <h3>ID: @item.ID</h3>
             <p>Due Date: @item.DueDate</p>
         </del>
-        <input asp-controller="ToDoList" asp-action="TryCompleteItem" type="checkbox" checked="checked" />
         <a asp-controller="ToDoList" asp-action="TryCompleteItem" asp-route-itemId="@item.ID">Mark incomplete</a>
 
     }
